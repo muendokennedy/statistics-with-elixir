@@ -7,6 +7,7 @@ defmodule Elixirstuts.CentralTendency.Mean do
   def population_mean(nums) when is_list(nums) do
     nums |> Validators.validate_num_list() |> cal_population_mean()
   end
+  def population_mean(_), do: Errors.invalid_data_type()
   # ====================================================================
   def cal_population_mean(false, _), do: Errors.invalid_data_type()
   def cal_population_mean({true, nums}) do
