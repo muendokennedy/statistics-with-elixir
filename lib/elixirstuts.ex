@@ -1,18 +1,6 @@
 defmodule Elixirstuts do
-  @moduledoc """
-  Documentation for `Elixirstuts`.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Elixirstuts.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  alias Elixirstuts.CentralTendency.Mean
+  # def population_mean(nums), do: Mean.population_mean(nums)
+  defdelegate population_mean(nums), to: Mean
+  defdelegate sample_mean(nums), to: Mean
 end
